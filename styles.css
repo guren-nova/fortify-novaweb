@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #0A0E1A;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.beta-badge {
+    background: #FF4B2B;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 10%;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+}
+
+p {
+    font-size: 24px;
+    color: #bbbbbb;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #A338F0, #FF4B2B);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.hero-image img {
+    height: 200px;
+    animation: glow 1.5s infinite alternate;
+}
+
+
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 10px #A338F0); }
+    100% { filter: drop-shadow(0 0 20px #FF4B2B); }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 10%;
+    background: #0A0E1A;
+    color: #ffffff;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #bbbbbb;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #A338F0;
+}
+
+.contact {
+    text-align: right;
+    min-width: 300px;
+    margin-left: auto;
+    word-break: break-all;
+}
+
+.contact h3 {
+    font-size: 18px;
+    color: #A338F0;
+    margin-bottom: 5px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.bounce {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .footer-left {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        text-align: center;
+        margin-left: 0;
+    }
+}
